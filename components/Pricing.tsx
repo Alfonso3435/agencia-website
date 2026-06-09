@@ -1,10 +1,11 @@
 'use client'
+
 const plans = [
   {
     name:     'Starter',
-    price:    '$97',
+    price:    '$297',
     period:   '/mo',
-    setup:    'No setup fee',
+    setup:    '$197 one-time setup fee',
     tagline:  'Perfect to get started',
     features: [
       'Missed call text-back (24/7)',
@@ -18,7 +19,7 @@ const plans = [
   },
   {
     name:     'Growth',
-    price:    '$197',
+    price:    '$497',
     period:   '/mo',
     setup:    'No setup fee',
     tagline:  'Most popular for service businesses',
@@ -35,9 +36,9 @@ const plans = [
   },
   {
     name:     'Pro',
-    price:    'Custom',
-    period:   '',
-    setup:    'Contact us',
+    price:    '$497–$3,000',
+    period:   '/mo',
+    setup:    'No setup fee',
     tagline:  'Multi-location or custom needs',
     features: [
       'Everything in Growth, plus:',
@@ -67,7 +68,7 @@ export default function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="section-subtitle" style={{ margin: '0 auto', textAlign: 'center' }}>
-            One recovered lead pays for 2+ months of service.
+            One recovered lead pays for months of service.
             No contracts — cancel anytime.
           </p>
         </div>
@@ -84,7 +85,7 @@ export default function Pricing() {
           margin: '0 auto 48px',
         }}>
           <p style={{ margin: 0, fontSize: '14px', color: '#0F6E5F', fontWeight: 500 }}>
-            🎯 The average plumber loses $400/job. One recovered call = 4 months of Starter, paid.
+            🎯 The average plumber loses $400/job. One recovered call covers your first month.
           </p>
         </div>
 
@@ -148,7 +149,7 @@ export default function Pricing() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px', marginBottom: '4px' }}>
                   <span style={{
-                    fontSize: plan.price === 'Custom' ? '32px' : '44px',
+                    fontSize: plan.name === 'Pro' ? '28px' : '44px',
                     fontWeight: 700,
                     color: plan.featured ? '#fff' : '#1A2F4E',
                     lineHeight: 1,
@@ -161,7 +162,7 @@ export default function Pricing() {
                     </span>
                   )}
                 </div>
-                <div style={{ fontSize: '13px', color: plan.featured ? '#2BB5A0' : '#2BB5A0', fontWeight: 500 }}>
+                <div style={{ fontSize: '13px', color: '#2BB5A0', fontWeight: 500 }}>
                   {plan.setup}
                 </div>
                 <div style={{
@@ -236,7 +237,7 @@ export default function Pricing() {
           fontSize: '13px',
           color: '#7A92A8',
         }}>
-          No contracts. No setup fees for the first 3 clients. Cancel anytime.
+          No contracts. Cancel anytime.
         </p>
 
       </div>

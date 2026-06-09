@@ -1,4 +1,5 @@
 'use client'
+
 const stats = [
   {
     value: '30–60%',
@@ -110,7 +111,7 @@ export default function Stats() {
           ))}
         </div>
 
-        {/* Early Access Banner */}
+        {/* Banner */}
         <div style={{
           backgroundColor: '#2BB5A0',
           borderRadius: '20px',
@@ -130,7 +131,7 @@ export default function Stats() {
               color: 'rgba(255,255,255,0.75)',
               marginBottom: '8px',
             }}>
-              Limited spots — Eastside businesses only
+              Eastside Seattle · Limited availability
             </div>
             <h3 style={{
               fontSize: 'clamp(22px, 3vw, 30px)',
@@ -139,8 +140,8 @@ export default function Stats() {
               margin: '0 0 10px',
               lineHeight: 1.2,
             }}>
-              Be one of our first 3 clients.<br />
-              First 60 days, completely free.
+              We only work with businesses<br />
+              serious about growth.
             </h3>
             <p style={{
               fontSize: '15px',
@@ -148,8 +149,9 @@ export default function Stats() {
               margin: 0,
               lineHeight: 1.6,
             }}>
-              In exchange, we ask for an honest case study of your results.
-              No credit card. No contracts. Just real results we can both point to.
+              We take on a limited number of clients per area so we can
+              deliver real results — not just set it and forget it.
+              Book a demo and see if your business qualifies.
             </p>
           </div>
           <a
@@ -172,7 +174,7 @@ export default function Stats() {
             onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
             onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
           >
-            Claim Your Free Spot →
+            See If You Qualify →
           </a>
         </div>
 

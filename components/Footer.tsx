@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -29,9 +30,12 @@ export default function Footer() {
               height={32}
               style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)', marginBottom: '14px' }}
             />
-            <p style={{ fontSize: '14px', color: '#9DB5C8', lineHeight: 1.65, margin: 0 }}>
+            <p style={{ fontSize: '14px', color: '#9DB5C8', lineHeight: 1.65, margin: '0 0 16px' }}>
               AI-powered missed call text-back for local businesses in the Eastside.
               Every call. Every lead. Answered.
+            </p>
+            <p style={{ fontSize: '13px', color: '#7A92A8', margin: 0 }}>
+              Mon–Fri, 10am–6pm PT
             </p>
           </div>
 
@@ -83,15 +87,20 @@ export default function Footer() {
                 Contact
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <a href="mailto:hello@answr.info" style={{ fontSize: '14px', color: '#9DB5C8', textDecoration: 'none' }}
+                <a href="tel:+14256528532" style={{ fontSize: '14px', color: '#9DB5C8', textDecoration: 'none' }}
                   onMouseEnter={e => (e.currentTarget.style.color = '#2BB5A0')}
                   onMouseLeave={e => (e.currentTarget.style.color = '#9DB5C8')}
                 >
-                  hello@answr.info
+                  +1 (425) 652-8532
                 </a>
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <span style={{ fontSize: '14px', color: '#9DB5C8' }}>Sammamish, WA 98074</span>
+                <a href="mailto:answrsupport@gmail.com" style={{ fontSize: '14px', color: '#9DB5C8', textDecoration: 'none' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#2BB5A0')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#9DB5C8')}
+                >
+                  answrsupport@gmail.com
+                </a>
               </div>
               <a href="#contact" style={{
                 display: 'inline-block',
