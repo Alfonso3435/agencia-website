@@ -1,26 +1,99 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy:   #1A2F4E;
+  --teal:   #2BB5A0;
+  --white:  #FFFFFF;
+  --surface:#F0F4F8;
+  --slate:  #7A92A8;
+  --teal-light: #E8F7F5;
+  --teal-dark:  #0F6E5F;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes reutilizables en toda la página */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--teal-dark);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 1.5px solid #C8D5E0;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--teal);
+  background-color: var(--teal-light);
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--slate);
+  line-height: 1.65;
+  max-width: 560px;
 }
